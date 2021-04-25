@@ -612,4 +612,71 @@ footer {
     padding-top: 30px;
     color: #777;
 }
+/*******************************************/
+.item .btn {
+    font-size: 13px;
+}
 
+.item-image {
+    max-height: 150px;
+    padding: 5px 0px;
+    height: 140px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+.items {
+    margin: 20px 0px;
+}
+
+.item {
+    min-height: 240px;
+    max-height: 260px;
+    max-width: 250px;
+    margin: 10px auto;
+    padding: 10px 10px;
+    border-radius: 4px;
+    border: 1px solid #f3f3f3;
+    box-shadow: inset 0px 0px 1px #ddd;
+    -webkit-transition: box-shadow 1s ease;
+    -moz-transition: box-shadow 1s ease;
+    -o-transition: box-shadow 1s ease;
+    transition: box-shadow 1s ease;
+}
+
+    .item hr {
+        margin: 5px 0px;
+    }
+
+    .item h6 {
+        padding-top: 5px;
+        text-align: center;
+    }
+
+        .item h6 a {
+            color: #0d10ce;
+        }
+
+            .item h6 a:hover {
+                text-decoration: none;
+            }
+
+    .item p {
+        line-height: 20px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        
+        text-align: center;
+    }
+
+    .item .item-location {
+        margin: 7px 0px;
+        display: inline-block;
+        padding: 2px 5px;
+        line-height: 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        background: #f3f3f3;
+        border: 1px solid #eee
+    }

@@ -14,7 +14,7 @@ namespace TravelGuideApp.Models
         public string Name { get; set; }
 
         public string Address { get; set; }
-
+        public String Url { get; set; }
         public int nbEtoile { get; set; }
         public List<Room> rooms { get; } = new List<Room>();
 
