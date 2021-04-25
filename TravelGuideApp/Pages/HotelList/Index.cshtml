@@ -1,0 +1,58 @@
+﻿@page
+@model TravelGuideApp.Pages.HotelList.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Create</h2>
+
+<h4>Hotel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Hotel.Name" class="control-label"></label>
+                <input asp-for="Hotel.Name" class="form-control" />
+                <span asp-validation-for="Hotel.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hotel.nbEtoile" class="control-label"></label>
+                <input asp-for="Hotel.nbEtoile" class="form-control" />
+                <span asp-validation-for="Hotel.nbEtoile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hotel.Address" class="control-label"></label>
+                <input asp-for="Hotel.Address" class="form-control" />
+                <span asp-validation-for="Hotel.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+<!------------------------------------------------->
+<div class="items">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="title">Discover Our Hotels </h3>
+            </div>
+            @foreach (var item in Model.Hotels)
+            {
+                <div class="col-md-3 col-sm-4">
+                    <div class="item">
+
+                        <a href="#"><img class="item-image" src="" alt="" /></a>
+                        <h6><a href="#">@Html.DisplayFor(modelItem => item.Name)</a></h6>
+                        <hr />
+                        <div class="item-price float-left">@Html.DisplayFor(modelItem => item.Address)</div>
+                        <button (click)="addToCart(p)" class="btn float-right">Add to Cart</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
