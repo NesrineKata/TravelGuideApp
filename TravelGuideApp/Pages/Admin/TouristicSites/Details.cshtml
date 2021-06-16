@@ -1,0 +1,50 @@
+﻿@page
+@model TravelGuideApp.Pages.Admin.TouristicSites.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>TouristicSite</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TouristicSite.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TouristicSite.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TouristicSite.YearsOfSeniority)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TouristicSite.YearsOfSeniority)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TouristicSite.IdAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TouristicSite.IdAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TouristicSite.Url)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TouristicSite.Url)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TouristicSite.description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TouristicSite.description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.TouristicSite.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

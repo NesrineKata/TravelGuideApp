@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TravelGuideApp.Models;
+using TravelGuideApp.Repositories;
+using TravelGuideApp.Repositories.Interfaces;
 
 namespace TravelGuideApp
 {
@@ -28,7 +30,13 @@ namespace TravelGuideApp
             //options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             //services.AddEntityFrameworkSqlite().AddDbContext<ApplicationDbContext>();
             services.AddDbContext<ApplicationDbContext>();
+            // add repository dependecy
+            services.AddScoped<IHotelRepository, HotelRepository>();
+            services.AddScoped<IRestaurantRepository, RestaurantRepository>();
+            services.AddScoped<IRoomRepository,RoomRepository>();
 
+            services.AddScoped<IBusRepository, BusRepository>();
+            services.AddScoped<ITouristicSiteRepository,TouristicSiteRepository>();
             services.AddRazorPages();
         }
 

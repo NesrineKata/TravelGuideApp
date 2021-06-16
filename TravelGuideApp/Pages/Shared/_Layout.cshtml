@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Bootstrap/css/star-rating.css" rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -16,62 +22,38 @@
             <nav>
                 <ul>
                     <li><a asp-area="" asp-page="/Index">Home |</a></li>
-                    <li><a asp-area="" asp-page="/HotelList/Index">Hotel |</a></li>
-                    <li><a href="#possibilities">Circuits |</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a asp-area="" asp-page="/Hotel/Index">Hotel |</a></li>
+                    <li><a asp-area="" asp-page="/TouristicSite/Index">Touristic Site |</a></li>
+                    <li><a asp-area="" asp-page="/Restaurant/Index">Restaurant |</a></li>
+                    <li><a asp-area="" asp-page="/Transport/Index">Transport |</a></li>
+                    
+                    
+
+                         
+                            
+                      
                 </ul>
             </nav>
         </div>
     </header>
-    <!--
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">TravelGuideApp</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/HotelList/Index">Hotel</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-        -->
+    
+     
     @RenderBody()
-    <!--<div class="container">
-        <main role="main" class="pb-3">
-
-        </main>
-    </div>
-        -->
+  
     <footer>
         <div>
-            <h1>Discorver The World<span class="orange">.</span></h1>
+            <!--   <h1>Discorver The World<span class="orange">.</span></h1>-->
 
-            <div class="copyright">Copyright © Tous droits réservés. Ybenson AGUSTAVE, étudiant TI FATEC OSASCO</div>
+            <div class="copyright">Copyright © 2021 . Nesrine Benaoun and  Nasreddine Ben Hamouda </div>
         </div>
     </footer>
-    <!--
-        <footer class="border-top footer text-muted">
-            <div class="container">
-                &copy; 2021 - TravelGuideApp - <a asp-area="" asp-page="/Privacy">Privacy</a>
-            </div>
-        </footer>
 
-    -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
-</body>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
 </html>
