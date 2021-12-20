@@ -1,0 +1,67 @@
+﻿@page
+@model TravelGuideApp.Pages.Admin.Bus.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Bus[0].Depart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bus[0].Destination)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bus[0].Transport)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bus[0].Url)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bus[0].description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bus[0].Schedule)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Bus) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Depart.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destination.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Transport.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Url)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Schedule)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.NumLine">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.NumLine">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.NumLine">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

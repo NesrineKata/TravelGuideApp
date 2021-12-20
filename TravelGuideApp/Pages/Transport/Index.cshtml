@@ -1,0 +1,29 @@
+﻿@page
+@model TravelGuideApp.Pages.Transport.IndexModel
+@{
+}
+<div class="container d-flex justify-content-center">
+    <div class="row">
+        @foreach (var item in Model.busList)
+        {
+            <div class="col-md-4">
+
+                <div class="card">
+                    <div> <img src="@item.Url" class="img-responsive image"> </div>
+                    <p class="rating">9.2</p>
+                    <div class="card-body">
+                        <h5 class="card-title">Bus</h5>
+                        <p class="card-text"><i class="fa fa-map-marker marker"></i>From @item.Depart.Name to @item.Destination.Name</p>
+                        <p class="card-text">
+                            Schedule : @item.Schedule
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        }
+
+    </div>
+</div>

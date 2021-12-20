@@ -1,0 +1,31 @@
+﻿@page
+@model TravelGuideApp.Pages.Restaurant.IndexModel
+@{
+}
+<div class="container d-flex justify-content-center">
+    <div class="row">
+        @foreach (var item in Model.restList)
+    {
+        <div class="col-md-4">
+
+            <div class="card">
+                <div> <img src="@item.Url" class="img-responsive image"> </div>
+                <p class="rating">9.2</p>
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text"><i class="fa fa-map-marker marker"></i> @item.Address.country,@item.Address.city, @item.Address.address</p>
+                    <p class="card-text">
+                        @item.cuisineType Restaurant
+                    </p>
+                    
+                    <a class="btn btn-primary btn-md mr-1 mb-2" asp-page="/Restaurant/RestDetails" asp-route-restid="@item.Id">Details</a>
+
+                </div>
+
+            </div>
+
+        </div>
+    }
+        
+    </div>
+</div>

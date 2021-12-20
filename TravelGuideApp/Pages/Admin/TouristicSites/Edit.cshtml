@@ -1,0 +1,56 @@
+﻿@page
+@model TravelGuideApp.Pages.Admin.TouristicSites.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>TouristicSite</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TouristicSite.Id" />
+            <div class="form-group">
+                <label asp-for="TouristicSite.Name" class="control-label"></label>
+                <input asp-for="TouristicSite.Name" class="form-control" />
+                <span asp-validation-for="TouristicSite.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TouristicSite.YearsOfSeniority" class="control-label"></label>
+                <input asp-for="TouristicSite.YearsOfSeniority" class="form-control" />
+                <span asp-validation-for="TouristicSite.YearsOfSeniority" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TouristicSite.IdAddress" class="control-label"></label>
+                <input asp-for="TouristicSite.IdAddress" class="form-control" />
+                <span asp-validation-for="TouristicSite.IdAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TouristicSite.Url" class="control-label"></label>
+                <input asp-for="TouristicSite.Url" class="form-control" />
+                <span asp-validation-for="TouristicSite.Url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TouristicSite.description" class="control-label"></label>
+                <textarea asp-for="TouristicSite.description" class="form-control"></textarea>
+                <span asp-validation-for="TouristicSite.description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

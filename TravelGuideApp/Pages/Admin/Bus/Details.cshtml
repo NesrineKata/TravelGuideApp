@@ -1,0 +1,56 @@
+﻿@page
+@model TravelGuideApp.Pages.Admin.Bus.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Bus</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bus.Depart)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bus.Depart.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bus.Destination)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bus.Destination.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bus.Transport)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bus.Transport.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bus.Url)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bus.Url)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bus.description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bus.description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bus.Schedule)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bus.Schedule)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Bus.NumLine">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TravelGuideApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Bootstrap/css/star-rating.css" rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>Discover The World<span class="orange">.</span></h1>
+            <nav>
+                <ul>
+                    <li><a asp-area="" asp-page="/Index">Home |</a></li>
+                    <li><a asp-area="" asp-page="/Hotel/Index">Hotel |</a></li>
+                    <li><a asp-area="" asp-page="/TouristicSite/Index">Touristic Site |</a></li>
+                    <li><a asp-area="" asp-page="/Restaurant/Index">Restaurant |</a></li>
+                    <li><a asp-area="" asp-page="/Transport/Index">Transport |</a></li>
+                    
+                    
+
+                         
+                            
+                      
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+     
+    @RenderBody()
+  
+    <footer>
+        <div>
+            <!--   <h1>Discorver The World<span class="orange">.</span></h1>-->
+
+            <div class="copyright">Copyright © 2021 . Nesrine Benaoun</div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
